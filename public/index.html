@@ -1,41 +1,67 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Centros de Acopio Mexico</title>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap-toggle.min.css">
+  <link rel="stylesheet" href="../../css/styles_CA.css">
+  <meta/>
+</head>
+
+<body>
+  <h1>Alta de datos por Centro de acopio</h1>
+
+
+  <form>
+    <h1>Capture todos los datos como le son solicitados. Sea preciso con la información</h1>
+
+    <div class="contentform">
+      <div class="leftcontact">
+        <div class="form-group">
+          <p>Nombre de Producto<span>*</span></p>
+          <span class="icon-case"></span>
+          <input type="text" name="nom" id="nom" data-rule="required" data-msg="Capture el campo " />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <p>Estado del Producto<span>*</span></p><input type="checkbox" data-toggle="toggle" data-on="Sobra" data-off="Faltante">
+        </div>
+        <div class="form-group">
+          <p>Ultima fecha de Actualización</p>
+          <div id="lastUpdate">22/22/22</div>
+
+        </div>
+      </div>
+
+      <div class="rightcontact">
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Listas de Centro de Acopio
+                   <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">CA_1</a></li>
+            <li><a href="#">CA_2</a></li>
+            <li><a href="#">CA_3</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <button type="submit" class="button-createProduct">Alta de Producto</button>
+  </form>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../../js/bootstrap-toggle.min.js"></script>
+  <script src="../../js/CA_script.js"></script>
+
+</body>
+
 </html>
